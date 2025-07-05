@@ -11,6 +11,9 @@
       margin: 0;
       padding: 0;
       text-align: center;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
     }
     header {
       background-color: #333;
@@ -18,16 +21,20 @@
       padding: 20px 0;
       font-size: 2rem;
       font-weight: bold;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1001;
     }
     /* Fixed heading style */
     .fixed-intro {
       position: fixed;
-      top: 60px; /* below the header */
+      top: 60px; /* Below the header */
       left: 0;
       width: 100%;
       background: #f4f4f9;
       color: #555;
-      font-size: 1.4rem;
+      font-size: 1rem; /* Smaller heading as previously set */
       font-weight: bold;
       padding: 15px 0;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -38,7 +45,7 @@
       flex-wrap: wrap;
       justify-content: center;
       gap: 15px;
-      margin: 130px 30px 30px; /* top margin increased to avoid overlap with fixed intro */
+      margin: 150px 30px 30px; /* Increased top margin to move photos further down */
     }
     .gallery img {
       width: 200px;
@@ -52,57 +59,6 @@
     .gallery img:hover {
       transform: scale(1.05);
     }
-    footer {
-      background-color: #333;
-      color: white;
-      padding: 15px 0;
-      position: fixed;
-      width: 100%;
-      bottom: 0;
-    }
-  </style>
-</head>
-<body>
-
-<header>Mohd Saddam</header>
-
-<!-- Fixed heading -->
-<div class="fixed-intro">
-  <h1>Welcome to my personal website! Here are some photos that I like.</h1>
-</div>
-
-<div class="gallery">
-  <img src="IMG_20240617_100427_272.jpg" alt="Nature Photo 1" />
-  <img src="IMG_20250611_121558_350.jpg" alt="Nature Photo 2" />
-  <img src="student.jfif" alt="Nature Photo 3" />
-  <img src="Screenshot (1).png" alt="Nature Photo 4" />
-  <img src="OIP (5).jfif" alt="Nature Photo 5" />
-  <img src="istockphoto-174692069-612x612.jpg" alt="Nature Photo 6" />
-</div>
-
-<footer>© 2025 Mohd Saddam</footer>
-
-</body>
-</html>
-<footer>© 2025 Mohd Saddam</footer>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Login - Mohd Saddam</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f0f2f5;
-      display: flex;
-      justify-content: down;
-      align-items: down;
-      height: 100vh;
-    }
     .login-container {
       background: white;
       padding: 40px 30px;
@@ -110,6 +66,7 @@
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
       width: 320px;
       text-align: center;
+      margin: 30px auto 60px; /* Centered horizontally, space for footer */
     }
     .login-container h2 {
       margin-bottom: 20px;
@@ -143,10 +100,33 @@
       font-size: 0.9rem;
       color: #777;
     }
+    footer {
+      background-color: #333;
+      color: white;
+      padding: 15px 0;
+      width: 100%;
+      bottom: 0;
+      margin-top: auto; /* Pushes footer to bottom of flex container */
+    }
   </style>
 </head>
 <body>
-<div>down<Div>
+
+<header>Mohd Saddam</header>
+
+<div class="fixed-intro">
+  <h1>Welcome to my personal website! Here are some photos that I like.</h1>
+</div>
+
+<div class="gallery">
+  <img src="IMG_20240617_100427_272.jpg" alt="Nature Photo 1" />
+  <img src="IMG_20250611_121558_350.jpg" alt="Nature Photo 2" />
+  <img src="student.jfif" alt="Nature Photo 3" />
+  <img src="Screenshot (1).png" alt="Nature Photo 4" />
+  <img src="OIP (5).jfif" alt="Nature Photo 5" />
+  <img src="istockphoto-174692069-612x612.jpg" alt="Nature Photo 6" />
+</div>
+
 <div class="login-container">
   <h2>Login to Mohd Saddam</h2>
   <form>
@@ -158,6 +138,8 @@
     © 2025 Mohd Saddam
   </div>
 </div>
+
+<footer>© 2025 Mohd Saddam</footer>
 
 </body>
 </html>
