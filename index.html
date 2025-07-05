@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta- charset="UTF-8" />
+  <meta- name="viewport" content="width=device-width, initial-scale=1" />
   <title>Mohd Saddam</title>
   <style>
     body {
@@ -19,18 +19,26 @@
       font-size: 2rem;
       font-weight: bold;
     }
-    .intro {
-      margin: 20px auto;
-      max-width: 600px;
-      font-size: 1.2rem;
+    /* Fixed heading style */
+    .fixed-intro {
+      position: fixed;
+      top: 60px; /* below the header */
+      left: 0;
+      width: 100%;
+      background: #f4f4f9;
       color: #555;
+      font-size: 1.4rem;
+      font-weight: bold;
+      padding: 15px 0;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      z-index: 1000;
     }
     .gallery {
       display: flex;
       flex-wrap: wrap;
-      justify-content: up;
+      justify-content: center; /* changed from 'up' to 'center' */
       gap: 15px;
-      margin: 30px;
+      margin: 130px 30px 30px; /* top margin increased to avoid overlap with fixed intro */
     }
     .gallery img {
       width: 200px;
@@ -58,10 +66,24 @@
 
 <header>Mohd Saddam</header>
 
-<div class="intro">
-  <p>Welcome to my personal website! Here are some photos that I like.</p>
+<!-- Fixed intro text -->
+<div class="fixed-intro">
+  Welcome to my personal website! Here are some photos that I like.
 </div>
-  <center>Top</center>
+
+<div class="gallery">
+  <img src="IMG_20240617_100427_272.jpg" alt="Nature Photo 1" />
+  <img src="IMG_20250611_121558_350.jpg" alt="Nature Photo 2" />
+  <img src="student.jfif" alt="Nature Photo 3" />
+  <img src="Screenshot (1).png" alt="Nature Photo 4" />
+  <img src="OIP (5).jfif" alt="Nature Photo 5" />
+  <img src="istockphoto-174692069-612x612.jpg" alt="Nature Photo 6" />
+</div>
+
+<footer>© 2025 Mohd Saddam</footer>
+
+</body>
+</html>
 
 <div class="gallery">
   <img src="IMG_20240617_100427_272.jpg" alt="Nature Photo 1" />
